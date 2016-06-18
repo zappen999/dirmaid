@@ -1,0 +1,35 @@
+{
+  "name": "dirmaid",
+  "version": "0.0.1",
+  "description": "Service to keep directories clean from old files",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zappen999/dirmaid.git"
+  },
+  "keywords": [
+    "cleaner",
+    "filesystem",
+    "directory",
+    "watcher",
+    "monitor"
+  ],
+  "author": "Johan Kanefur <johan.canefur@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zappen999/dirmaid/issues"
+  },
+  "homepage": "https://github.com/zappen999/dirmaid#readme",
+  "dependencies": {
+    "async": "^2.0.0-rc.6",
+    "glob": "^7.0.4",
+    "ms": "^0.7.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}
