@@ -11,7 +11,6 @@ maid = new Maid('*.log', {
 });
 
 maid.run();
-
 ```
 
 ### Installation
