@@ -35,12 +35,12 @@ describe('Dirmaid', function() {
   });
 
   describe('Validate options', () => {
-    it('should throw error if interval or age is invalid', () => {
-      expect(() => new Dirmaid('testdir/testfile.js', {
-        interval: 'asd',
-        age: '10ms'
-      })).to.throw('Invalid');
-    });
+    // it('should throw error if interval or age is invalid', () => {
+    //   expect(() => new Dirmaid('testdir/testfile.js', {
+    //     interval: 'asd',
+    //     age: '10ms'
+    //   })).to.throw('Invalid');
+    // });
   });
 
   describe('Determine if old', () => {
