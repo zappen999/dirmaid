@@ -34,9 +34,33 @@ describe('Dirmaid', function() {
     });
   });
 
-  describe('Validate path', () => {
-    it('should throw error if the path doesnt exist', () => {
-      const m = new Dirmaid('paththatdoesntexist');
+  describe('Validate options', () => {
+    it('should throw error if interval or age is invalid', () => {
+      expect(() => new Dirmaid('testdir/testfile.js', {
+        interval: 'asd',
+        age: '10ms'
+      })).to.throw('Invalid');
+    });
+  });
+
+  describe('Determine if old', () => {
+    it('should return true if the date is older than max age', () => {
+      const m = new Dirmaid('testdir/testfile.js', {age: '3h'});
+
+      const cdate = new Date('2000-01-01 20:20:20');
+      const ref = new Date('2000-01-01 09:20:20');
+
+      expect(m._isOld(cdate, '10h', ref)).to.equal(false);
+    });
+
+    it('should return false if the date is newer than max age', () => {
+      const m = new Dirmaid('testdir/testfile.js', {age: '3h'});
+
+      const cdate = new Date('2000-01-01 20:20:20');
+      const ref = new Date('2000-01-01 19:20:20');
+
+      // In text: cdate can be at most 10hours after the ref
+      expect(m._isOld(cdate, '10h', ref)).to.equal(false);
     });
   });
 });

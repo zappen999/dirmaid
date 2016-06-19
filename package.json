@@ -1,7 +1,7 @@
 {
   "name": "dirmaid",
   "version": "0.0.1",
-  "description": "Service to keep directories clean from old files",
+  "description": "A maid to keep directories clean from old files. Useful for clearing log directories etc.",
   "main": "index.js",
   "scripts": {
     "test": "mocha test"
