@@ -1,6 +1,6 @@
 {
   "name": "dirmaid",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A maid to keep directories clean from old files. Useful for clearing log directories etc.",
   "main": "index.js",
   "scripts": {
